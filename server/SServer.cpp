@@ -180,23 +180,23 @@ void handle_login(const uint8_t * packet, int sockfd)
 
 
 	memset(resp_pkt, 0, sizeof(resp_pkt));
-	resp_pkt[0] = 0x78;
-	resp_pkt[1] = 0x78;
-	resp_pkt[2] = 5 ;
-	resp_pkt[3] = packet[1];
-	resp_pkt[4] = information_serial_num[0];
-	resp_pkt[5] = information_serial_num[1];
+//	resp_pkt[0] = 0x78;
+//	resp_pkt[1] = 0x78;
+//	resp_pkt[2] = 5 ;
+//	resp_pkt[3] = packet[1];
+//	resp_pkt[4] = information_serial_num[0];
+//	resp_pkt[5] = information_serial_num[1];
+//
+//	uint16_t resp_crc = GetCrc16(&resp_pkt[2], 4) ;
+//
+//	resp_pkt[6] = (uint8_t)(resp_crc >> 8) ;
+//	resp_pkt[7] = (uint8_t)(0x00ff & resp_crc) ;
+//
+//	resp_pkt[8] = 0x0d;
+//	resp_pkt[9] = 0x0a;
 
-	uint16_t resp_crc = GetCrc16(&resp_pkt[2], 4) ;
-
-	resp_pkt[6] = (uint8_t)(resp_crc >> 8) ;
-	resp_pkt[7] = (uint8_t)(0x00ff & resp_crc) ;
-
-	resp_pkt[8] = 0x0d;
-	resp_pkt[9] = 0x0a;
-
-	printf("resp packet crc %d ", resp_crc);
-	printf("resp_packet packet : ");
+//	printf("resp packet crc %d ", resp_crc);
+//	printf("resp_packet packet : ");
 	for(int i=0; i < packet_length; i++)
 	{
 		printf("%x  ", resp_pkt[i]);
@@ -204,7 +204,7 @@ void handle_login(const uint8_t * packet, int sockfd)
     printf("\n");
 
 	//send(sockfd, (void*)sesp_pkt, strlen(sesp_pkt), MSG_NOSIGNAL);
-	send(sockfd, (void*)resp_pkt, 10, MSG_NOSIGNAL);
+
 
 }
 void handle_heartbit(const uint8_t * packet, int sockfd)
@@ -305,18 +305,9 @@ void handle_location_msg(const uint8_t * packet, int sockfd)
 
 		speed = packet[17];
 
-		printf("latitude %.6f  longitude %.6f  speed %d  \n",lat_f, lon_f,  speed);
-
+		printf("latitude %.6f  longitude %.6f  speed %d  \n", lat_f, lon_f,  speed);
 	}
-
-
-
-
-
 }
-
-
-
 
 
 
@@ -332,6 +323,25 @@ void handle_location_msg(const uint8_t * packet, int sockfd)
 
 void handle_connection(int sockfd)
 {
+    uint8_t buffer[10240];
+    uint8_t resp_packet[32];
+
+
+	uint8_t imei[32];
+	uint8_t latitude[8];
+	uint8_t longitude[8];
+	uint8_t time[8];
+	uint8_t course[3];
+	uint8_t temp[3];
+	uint8_t fuel[4];
+	uint8_t sensor ; //engline door
+	uint8_t gps_satellites_no;
+	uint8_t speed;
+
+	uint8_t crc[2];
+
+
+
 	//Packet_t  packet;
     uint8_t * pkt_start_ptr ;
 //	char latitude[14];
@@ -341,7 +351,7 @@ void handle_connection(int sockfd)
 //	char vehicle[52];
 //
 //	int flag = 0, index = 0  ;
-    uint8_t buffer[10240];
+
  //   char terminal_id[32] = { 0 };
  //   uint8_t packet[28] ; //={ 0 };
  //   char * bufferPtr = buffer ;
@@ -352,9 +362,22 @@ void handle_connection(int sockfd)
 //    mongocxx::database db =  client["vtsDB"];
 
 
-    std::string response = "received ...\n";
+   // std::string response = "received ...\n";
    // const char* responseChar = response.c_str();
     memset(buffer, 0, 10240);
+    memset(resp_packet, 0, sizeof(resp_packet));
+
+    memset(imei, 0, sizeof(imei));
+    memset(latitude, 0, sizeof(latitude));
+    memset(longitude, 0, sizeof(longitude));
+    memset(time, 0, sizeof(time));
+    memset(course, 0, sizeof(course));
+    memset(temp, 0, sizeof(temp));
+    memset(fuel, 0, sizeof(imei));
+    memset(imei, 0, sizeof(imei));
+    memset(crc, 0, sizeof(crc));
+
+
     while(recv(sockfd, buffer, 10240, 0) > 0)
     {
         for(int i=0;; i++)
@@ -364,68 +387,105 @@ void handle_connection(int sockfd)
         }
         printf("\n");
 
-
-   // 	int xx = 0, cnt=0 ;
     	for(int i=0; i<10240; i++)
     	{
     		if(buffer[i]==0x78 && buffer[i+1]==0x78)
     		{
     			pkt_start_ptr = &buffer[i+2];
-
-//    			memcpy(packet.start_bits, &buffer[i], 2);
-//    			packet.packet_length = buffer[i+2];
-//    			packet.protocol_number = buffer[i+3];
-//    			packet.message.content = buffer[i+4];
-
-
-
     	        switch(buffer[i+3])
     	        {
     	        	case PROTOCOL_NO_LOGIN:
     	        		handle_login(pkt_start_ptr, sockfd);
+    	        		{
+        	        		resp_packet[0] = 0x78;
+        	        		resp_packet[1] = 0x78;
+        	        		resp_packet[2] = 5 ;
+        	        		resp_packet[3] = buffer[i+3];
+        	        		resp_packet[4] = buffer[i+12];
+        	        		resp_packet[5] = buffer[i+13];
+
+        	        		uint16_t resp_crc = GetCrc16(&resp_packet[2], 4) ;
+
+        	        		resp_packet[6] = (uint8_t)(resp_crc >> 8) ;
+        	        		resp_packet[7] = (uint8_t)(0x00ff & resp_crc) ;
+
+        	        		resp_packet[8] = 0x0d;
+        	        		resp_packet[9] = 0x0a;
+    	        		}
+    	        		//	printf("resp packet crc %d ", resp_crc);
+    	        		printf("login packet :  ");
+    	        		send(sockfd, (void*)resp_packet, 10, MSG_NOSIGNAL);
     	        		break;
     	        	case PROTOCOL_HEARTBIT_LOGIN:
-    	        		handle_heartbit(pkt_start_ptr, sockfd);
+    	        		//handle_heartbit(pkt_start_ptr, sockfd);
+    	        		printf("hartbit-packet\n");
+    	        		//memset(resp_packet, 0, sizeof(resp_packet));
+    	        		{
+           	        		uint16_t resp_crc;
+        	        		resp_packet[0] = 0x78;
+        	        		resp_packet[1] = 0x78;
+        	        		resp_packet[2] = 5 ;
+        	        		resp_packet[3] = buffer[i+3];
+        	        		resp_packet[4] = buffer[i+9];
+        	        		resp_packet[5] = buffer[i+10];
+
+        	        		resp_crc = GetCrc16(&resp_packet[2], 4) ;
+        	        		resp_packet[6] = (uint8_t)(resp_crc >> 8) ;
+        	        		resp_packet[7] = (uint8_t)(0x00ff & resp_crc) ;
+
+        	        		resp_packet[8] = 0x0d;
+        	        		resp_packet[9] = 0x0a;
+    	        		}
+    	        		send(sockfd, (void*)resp_packet, 10, MSG_NOSIGNAL);
     	        		break;
     	        	case PROTOCOL_LOCATION:
-    	        		handle_location_msg(pkt_start_ptr, sockfd);
+    	          		memcpy(time,  &buffer[i+4], 6);
+    	          		gps_satellites_no = buffer[i+10];
+    	          		memcpy(latitude,  &buffer[i+11], 4);
+    	          		memcpy(longitude,  &buffer[i+15], 4);
+    	          		speed = buffer[i+19];
+    	          		memcpy(course,  &buffer[i+20], 2);
+    	          		memcpy(crc,  &buffer[32], 2 ) ;
+    	          		{
+        	        		float lat_f, lon_f ;
+        	        		int lat_int, long_int ;
+
+        	        		uint16_t cal_crc = GetCrc16(&buffer[2], 30) ;
+        	        		uint16_t rvc_crc  = (0xff00 & (crc[0] << 8)) ;
+
+        	        		rvc_crc  |= (0x00ff & crc[1]);
+
+        	        		printf("rvc_crc %d  and  cal_crc  %d\n", rvc_crc, cal_crc);
+
+        	        		if(rvc_crc == cal_crc)
+        	        		{
+        	        			lat_int =  (0xff000000  &  (buffer[i+11] << 24)) ;
+        	        			lat_int |= (0x00ff0000  &  (buffer[i+12] << 16)) ;
+        	        			lat_int |= (0x0000ff00  &  (buffer[i+13] << 8)) ;
+        	        			lat_int |= (0x000000ff  &  (buffer[i+14] )) ;
+
+        	        			long_int =  (0xff000000  &  (buffer[13] << 24)) ;
+        	        			long_int |= (0x00ff0000  &  (buffer[14] << 16)) ;
+        	        			long_int |= (0x0000ff00  &  (buffer[15] << 8)) ;
+        	        			long_int |= (0x000000ff  &  buffer[16] ) ;
+
+        	        			lat_f = lat_int ;
+        	        			lon_f = long_int;
+
+        	        			lat_f /= 1800000 ;
+        	        			lon_f /= 1800000 ;
+
+        	        			printf("latitude %.6f  longitude %.6f  speed %d  \n", lat_f, lon_f,  speed);
+        	        		}
+    	          		}
+       	        		//handle_location_msg(pkt_start_ptr, sockfd);
     	        		break;
     	        	default:
     	        		break;
     	        }
     		}
-
-//    		else if(buffer[i]==0x0D && buffer[i+1]==0x0A)
-//    		{
-//    			xx  = 0 ;
-////    			printf("packet : ");
-////    			for(int vj=0; vj<cnt; vj++)
-////    			{
-////    				printf("%x  ", packet[vj]);
-////    			}
-////    	        printf("\n");
-//
-//    	        switch(packet[1])
-//    	        {
-//    	        	case PROTOCOL_NO_LOGIN:
-//    	        		printf("protocol login \n");
-//    	        		handle_login(packet);
-//    	        		break;
-//    	        	default:
-//    	        		break;
-//    	        }
-//    		}
-//
-//    		else if(xx ==1)
-//    		{
-//    			packet[cnt++] = buffer[i];
-//    			//printf("%x  ",buffer[i]);
-//    		}
     	}
-
-        //std::cout << buffer<<std::endl;
-
-        bzero(buffer, 10240);
+        //bzero(buffer, 10240);
         memset(buffer, 0, 10240);
 
     }
