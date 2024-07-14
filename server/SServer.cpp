@@ -242,32 +242,76 @@ void handle_heartbit(const uint8_t * packet, int sockfd)
 void handle_location_msg(const uint8_t * packet, int sockfd)
 {
 	uint8_t date[7];
-	uint8_t gps_quality=0;
+	//uint8_t gps_quality=0;
 	uint8_t latitude[4];
 	uint8_t longitude[4];
 	uint8_t speed ;
+	uint8_t course[2] ;
+	uint8_t serial_number[2];
+	uint8_t error_check[2];
 
-	uint8_t packet_length = packet[0];
-	uint8_t protocol_number = packet[1];
-	const uint8_t *information_content = &packet[2];
+	uint32_t latitude_l;
+	uint32_t longitude_l;
+
+
+
+	//uint8_t packet_length = packet[0];
+	//uint8_t protocol_number = packet[1];
+	//const uint8_t *information_content = &packet[2];
 	//const uint8_t *serial_numer = &packet[7];
 	//const uint8_t *error_check = &packet[9];
 	memcpy(date,  &packet[2], 6);
-	gps_quality = packet[8] ;
+	//gps_quality = packet[8] ;
 
 	memset(latitude,  0, sizeof(latitude));
 	memset(longitude,  0, sizeof(longitude));
 
 	memcpy(latitude,  &packet[9], 4);
 	memcpy(longitude,  &packet[13], 4);
-	speed = packet[17];
+	//speed = packet[17];
 
+	memcpy(course, &packet[18], 2);
+	memcpy(serial_number, &packet[28], 2);
+	memcpy(error_check,  &packet[30], 2 ) ;
 
+	uint16_t resp_crc  = (0xff00 & (error_check[0] << 8)) ;
+	resp_crc  |= (0x00ff & error_check[1]);
 
-
-
+	uint16_t esp_esp_crc = GetCrc16(&packet[0], 30) ;
 
 	printf("location-packet\n");
+	printf("crc get %d  and  estimated crc %d\n", resp_crc, esp_esp_crc);
+
+	if(esp_esp_crc == resp_crc)
+	{
+		latitude_l = (0xff000000  &  (packet[9] << 24)) ;
+		latitude_l |= (0x00ff0000  &  (packet[10] << 16)) ;
+		latitude_l |= (0x0000ff00  &  (packet[11] << 8)) ;
+		latitude_l |= (0x000000ff  &  packet[12] ) ;
+
+
+
+		longitude_l = (0xff000000  &  (packet[13] << 24)) ;
+		longitude_l |= (0x00ff0000  &  (packet[14] << 16)) ;
+		longitude_l |= (0x0000ff00  &  (packet[15] << 8)) ;
+		longitude_l |= (0x000000ff  &  packet[16] ) ;
+
+		float lat_f = latitude_l ;
+		float lon_f = longitude_l;
+
+		lat_f /= 1800000 ;
+
+		lon_f /= 1800000 ;
+
+		speed = packet[17];
+
+		printf("latitude %.6f  longitude %.6f  speed %d  \n",lat_f, lon_f,  speed);
+
+	}
+
+
+
+
 
 }
 
@@ -313,9 +357,10 @@ void handle_connection(int sockfd)
     memset(buffer, 0, 10240);
     while(recv(sockfd, buffer, 10240, 0) > 0)
     {
-        for(int i=0; i<28; i++)
+        for(int i=0;; i++)
         {
         	printf("%x  ", buffer[i]);
+        	if(buffer[i]==0x0a && buffer[i-1]==0x0d)	break;
         }
         printf("\n");
 

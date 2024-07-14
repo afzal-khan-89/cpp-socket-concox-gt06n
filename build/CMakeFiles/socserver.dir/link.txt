@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -Wextra -Werror CMakeFiles/socserver.dir/main.cpp.o CMakeFiles/socserver.dir/server/SServer.cpp.o -o socserver  -Wl,-rpath,/usr/local/lib /usr/local/lib/libmongocxx.so.r3.9.0 -lpthread /usr/local/lib/libbsoncxx.so.r3.9.0 -Wl,-rpath-link,/usr/local/lib 
+/usr/bin/c++  -Wall -Wextra  CMakeFiles/socserver.dir/main.cpp.o CMakeFiles/socserver.dir/server/SServer.cpp.o -o socserver  -Wl,-rpath,/usr/local/lib /usr/local/lib/libmongocxx.so.r3.9.0 -lpthread /usr/local/lib/libbsoncxx.so.r3.9.0 -Wl,-rpath-link,/usr/local/lib 

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/server -I/db -I/model -isystem /usr/local/include/mongocxx/v_noabi -isystem /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc -isystem /usr/local/include/bsoncxx/v_noabi
 
-CXX_FLAGS =  -Wall -Wextra -Werror -std=c++2a
+CXX_FLAGS =  -Wall -Wextra  -std=c++2a
 
