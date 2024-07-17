@@ -166,6 +166,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/ObjectInfo.o: model/ObjectInfo.cpp.o
+.PHONY : model/ObjectInfo.o
+
+# target to build an object file
+model/ObjectInfo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/model/ObjectInfo.cpp.o
+.PHONY : model/ObjectInfo.cpp.o
+
+model/ObjectInfo.i: model/ObjectInfo.cpp.i
+.PHONY : model/ObjectInfo.i
+
+# target to preprocess a source file
+model/ObjectInfo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/model/ObjectInfo.cpp.i
+.PHONY : model/ObjectInfo.cpp.i
+
+model/ObjectInfo.s: model/ObjectInfo.cpp.s
+.PHONY : model/ObjectInfo.s
+
+# target to generate assembly for a file
+model/ObjectInfo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/model/ObjectInfo.cpp.s
+.PHONY : model/ObjectInfo.cpp.s
+
+server/MongoInstance.o: server/MongoInstance.cpp.o
+.PHONY : server/MongoInstance.o
+
+# target to build an object file
+server/MongoInstance.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/server/MongoInstance.cpp.o
+.PHONY : server/MongoInstance.cpp.o
+
+server/MongoInstance.i: server/MongoInstance.cpp.i
+.PHONY : server/MongoInstance.i
+
+# target to preprocess a source file
+server/MongoInstance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/server/MongoInstance.cpp.i
+.PHONY : server/MongoInstance.cpp.i
+
+server/MongoInstance.s: server/MongoInstance.cpp.s
+.PHONY : server/MongoInstance.s
+
+# target to generate assembly for a file
+server/MongoInstance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/server/MongoInstance.cpp.s
+.PHONY : server/MongoInstance.cpp.s
+
 server/SServer.o: server/SServer.cpp.o
 .PHONY : server/SServer.o
 
@@ -190,6 +238,30 @@ server/SServer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/server/SServer.cpp.s
 .PHONY : server/SServer.cpp.s
 
+server/mongo.o: server/mongo.cpp.o
+.PHONY : server/mongo.o
+
+# target to build an object file
+server/mongo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/server/mongo.cpp.o
+.PHONY : server/mongo.cpp.o
+
+server/mongo.i: server/mongo.cpp.i
+.PHONY : server/mongo.i
+
+# target to preprocess a source file
+server/mongo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/server/mongo.cpp.i
+.PHONY : server/mongo.cpp.i
+
+server/mongo.s: server/mongo.cpp.s
+.PHONY : server/mongo.s
+
+# target to generate assembly for a file
+server/mongo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/socserver.dir/build.make CMakeFiles/socserver.dir/server/mongo.cpp.s
+.PHONY : server/mongo.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -203,9 +275,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... model/ObjectInfo.o"
+	@echo "... model/ObjectInfo.i"
+	@echo "... model/ObjectInfo.s"
+	@echo "... server/MongoInstance.o"
+	@echo "... server/MongoInstance.i"
+	@echo "... server/MongoInstance.s"
 	@echo "... server/SServer.o"
 	@echo "... server/SServer.i"
 	@echo "... server/SServer.s"
+	@echo "... server/mongo.o"
+	@echo "... server/mongo.i"
+	@echo "... server/mongo.s"
 .PHONY : help
 
 

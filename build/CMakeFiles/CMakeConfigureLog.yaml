@@ -39,8 +39,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-cdfozY"
-      binary: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-cdfozY"
+      source: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DNVkoi"
+      binary: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DNVkoi"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -48,12 +48,12 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-cdfozY
+        Change Dir: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DNVkoi
         
-        Run Build Command(s):/usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_63836/fast && /usr/bin/make  -f CMakeFiles/cmTC_63836.dir/build.make CMakeFiles/cmTC_63836.dir/build
-        make[1]: Entering directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-cdfozY'
-        Building CXX object CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s):/usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f9527/fast && /usr/bin/make  -f CMakeFiles/cmTC_f9527.dir/build.make CMakeFiles/cmTC_f9527.dir/build
+        make[1]: Entering directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DNVkoi'
+        Building CXX object CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:hsa
@@ -62,8 +62,8 @@ events:
         Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-9QDOt0/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
         Thread model: posix
         gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/local/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccZOSjCh.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/local/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cch9pRzu.s
         GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)
         	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
         
@@ -87,15 +87,15 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 3d1eba838554fa2348dba760e4770469
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         as -v --64 -o CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZOSjCh.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         as -v --64 -o CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o /tmp/cch9pRzu.s
         GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-        Linking CXX executable cmTC_63836
-        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63836.dir/link.txt --verbose=1
-        /usr/bin/c++  -v CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_63836 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        Linking CXX executable cmTC_f9527
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9527.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f9527 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
@@ -107,10 +107,10 @@ events:
         gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_63836' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cciNzWZK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_63836 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_63836' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-        make[1]: Leaving directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-cdfozY'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f9527' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1eGDKV.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f9527 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f9527' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        make[1]: Leaving directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DNVkoi'
         
       exitCode: 0
   -
@@ -150,12 +150,12 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-cdfozY]
+        ignore line: [Change Dir: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DNVkoi]
         ignore line: []
-        ignore line: [Run Build Command(s):/usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_63836/fast && /usr/bin/make  -f CMakeFiles/cmTC_63836.dir/build.make CMakeFiles/cmTC_63836.dir/build]
-        ignore line: [make[1]: Entering directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-cdfozY']
-        ignore line: [Building CXX object CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s):/usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f9527/fast && /usr/bin/make  -f CMakeFiles/cmTC_f9527.dir/build.make CMakeFiles/cmTC_f9527.dir/build]
+        ignore line: [make[1]: Entering directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DNVkoi']
+        ignore line: [Building CXX object CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
@@ -164,8 +164,8 @@ events:
         ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-9QDOt0/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/local/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccZOSjCh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/local/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cch9pRzu.s]
         ignore line: [GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
         ignore line: []
@@ -189,15 +189,15 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 3d1eba838554fa2348dba760e4770469]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZOSjCh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o /tmp/cch9pRzu.s]
         ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [Linking CXX executable cmTC_63836]
-        ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63836.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_63836 ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking CXX executable cmTC_f9527]
+        ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9527.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_f9527 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
@@ -209,13 +209,13 @@ events:
         ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_63836' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cciNzWZK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_63836 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f9527' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc1eGDKV.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f9527 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cciNzWZK.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc1eGDKV.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -233,7 +233,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_63836] ==> ignore
+          arg [cmTC_f9527] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o]
@@ -245,7 +245,7 @@ events:
           arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
-          arg [CMakeFiles/cmTC_63836.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_f9527.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -289,33 +289,33 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-JV3QfX"
-      binary: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-JV3QfX"
+      source: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-rYZdMh"
+      binary: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-rYZdMh"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: " -Wall -Wextra -Werror"
+      CMAKE_CXX_FLAGS: " -Wall -Wextra "
       CMAKE_EXE_LINKER_FLAGS: ""
     buildResult:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-JV3QfX
+        Change Dir: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-rYZdMh
         
-        Run Build Command(s):/usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fadb4/fast && /usr/bin/make  -f CMakeFiles/cmTC_fadb4.dir/build.make CMakeFiles/cmTC_fadb4.dir/build
-        make[1]: Entering directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-JV3QfX'
-        Building CXX object CMakeFiles/cmTC_fadb4.dir/src.cxx.o
-        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -Wall -Wextra -Werror  -o CMakeFiles/cmTC_fadb4.dir/src.cxx.o -c /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-JV3QfX/src.cxx
-        Linking CXX executable cmTC_fadb4
-        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fadb4.dir/link.txt --verbose=1
-        /usr/bin/c++  -Wall -Wextra -Werror  CMakeFiles/cmTC_fadb4.dir/src.cxx.o -o cmTC_fadb4 
-        /usr/bin/ld: CMakeFiles/cmTC_fadb4.dir/src.cxx.o: in function `main':
+        Run Build Command(s):/usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8481a/fast && /usr/bin/make  -f CMakeFiles/cmTC_8481a.dir/build.make CMakeFiles/cmTC_8481a.dir/build
+        make[1]: Entering directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-rYZdMh'
+        Building CXX object CMakeFiles/cmTC_8481a.dir/src.cxx.o
+        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -Wall -Wextra   -o CMakeFiles/cmTC_8481a.dir/src.cxx.o -c /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-rYZdMh/src.cxx
+        Linking CXX executable cmTC_8481a
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8481a.dir/link.txt --verbose=1
+        /usr/bin/c++  -Wall -Wextra   CMakeFiles/cmTC_8481a.dir/src.cxx.o -o cmTC_8481a 
+        /usr/bin/ld: CMakeFiles/cmTC_8481a.dir/src.cxx.o: in function `main':
         src.cxx:(.text+0x46): undefined reference to `pthread_create'
         /usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
         /usr/bin/ld: src.cxx:(.text+0x5e): undefined reference to `pthread_cancel'
         /usr/bin/ld: src.cxx:(.text+0x6f): undefined reference to `pthread_join'
         collect2: error: ld returned 1 exit status
-        make[1]: *** [CMakeFiles/cmTC_fadb4.dir/build.make:99: cmTC_fadb4] Error 1
-        make[1]: Leaving directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-JV3QfX'
-        make: *** [Makefile:127: cmTC_fadb4/fast] Error 2
+        make[1]: *** [CMakeFiles/cmTC_8481a.dir/build.make:99: cmTC_8481a] Error 1
+        make[1]: Leaving directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-rYZdMh'
+        make: *** [Makefile:127: cmTC_8481a/fast] Error 2
         
       exitCode: 2
   -
@@ -334,29 +334,29 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6vzdBZ"
-      binary: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6vzdBZ"
+      source: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DzExNg"
+      binary: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DzExNg"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: " -Wall -Wextra -Werror"
+      CMAKE_CXX_FLAGS: " -Wall -Wextra "
       CMAKE_EXE_LINKER_FLAGS: ""
     buildResult:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6vzdBZ
+        Change Dir: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DzExNg
         
-        Run Build Command(s):/usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_06367/fast && /usr/bin/make  -f CMakeFiles/cmTC_06367.dir/build.make CMakeFiles/cmTC_06367.dir/build
-        make[1]: Entering directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6vzdBZ'
-        Building CXX object CMakeFiles/cmTC_06367.dir/CheckFunctionExists.cxx.o
-        /usr/bin/c++   -Wall -Wextra -Werror -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_06367.dir/CheckFunctionExists.cxx.o -c /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6vzdBZ/CheckFunctionExists.cxx
-        Linking CXX executable cmTC_06367
-        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06367.dir/link.txt --verbose=1
-        /usr/bin/c++  -Wall -Wextra -Werror -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_06367.dir/CheckFunctionExists.cxx.o -o cmTC_06367  -lpthreads 
+        Run Build Command(s):/usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6eecb/fast && /usr/bin/make  -f CMakeFiles/cmTC_6eecb.dir/build.make CMakeFiles/cmTC_6eecb.dir/build
+        make[1]: Entering directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DzExNg'
+        Building CXX object CMakeFiles/cmTC_6eecb.dir/CheckFunctionExists.cxx.o
+        /usr/bin/c++   -Wall -Wextra  -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_6eecb.dir/CheckFunctionExists.cxx.o -c /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DzExNg/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_6eecb
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6eecb.dir/link.txt --verbose=1
+        /usr/bin/c++  -Wall -Wextra  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_6eecb.dir/CheckFunctionExists.cxx.o -o cmTC_6eecb  -lpthreads 
         /usr/bin/ld: cannot find -lpthreads
         collect2: error: ld returned 1 exit status
-        make[1]: *** [CMakeFiles/cmTC_06367.dir/build.make:99: cmTC_06367] Error 1
-        make[1]: Leaving directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6vzdBZ'
-        make: *** [Makefile:127: cmTC_06367/fast] Error 2
+        make[1]: *** [CMakeFiles/cmTC_6eecb.dir/build.make:99: cmTC_6eecb] Error 1
+        make[1]: Leaving directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-DzExNg'
+        make: *** [Makefile:127: cmTC_6eecb/fast] Error 2
         
       exitCode: 2
   -
@@ -375,25 +375,25 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-mIHXrX"
-      binary: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-mIHXrX"
+      source: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6JmCyk"
+      binary: "/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6JmCyk"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: " -Wall -Wextra -Werror"
+      CMAKE_CXX_FLAGS: " -Wall -Wextra "
       CMAKE_EXE_LINKER_FLAGS: ""
     buildResult:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-mIHXrX
+        Change Dir: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6JmCyk
         
-        Run Build Command(s):/usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0fb09/fast && /usr/bin/make  -f CMakeFiles/cmTC_0fb09.dir/build.make CMakeFiles/cmTC_0fb09.dir/build
-        make[1]: Entering directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-mIHXrX'
-        Building CXX object CMakeFiles/cmTC_0fb09.dir/CheckFunctionExists.cxx.o
-        /usr/bin/c++   -Wall -Wextra -Werror -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_0fb09.dir/CheckFunctionExists.cxx.o -c /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-mIHXrX/CheckFunctionExists.cxx
-        Linking CXX executable cmTC_0fb09
-        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0fb09.dir/link.txt --verbose=1
-        /usr/bin/c++  -Wall -Wextra -Werror -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_0fb09.dir/CheckFunctionExists.cxx.o -o cmTC_0fb09  -lpthread 
-        make[1]: Leaving directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-mIHXrX'
+        Run Build Command(s):/usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f7915/fast && /usr/bin/make  -f CMakeFiles/cmTC_f7915.dir/build.make CMakeFiles/cmTC_f7915.dir/build
+        make[1]: Entering directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6JmCyk'
+        Building CXX object CMakeFiles/cmTC_f7915.dir/CheckFunctionExists.cxx.o
+        /usr/bin/c++   -Wall -Wextra  -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_f7915.dir/CheckFunctionExists.cxx.o -c /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6JmCyk/CheckFunctionExists.cxx
+        Linking CXX executable cmTC_f7915
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f7915.dir/link.txt --verbose=1
+        /usr/bin/c++  -Wall -Wextra  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_f7915.dir/CheckFunctionExists.cxx.o -o cmTC_f7915  -lpthread 
+        make[1]: Leaving directory '/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/CMakeScratch/TryCompile-6JmCyk'
         
       exitCode: 0
 ...

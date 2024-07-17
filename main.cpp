@@ -3,7 +3,7 @@
 int main()
 {
 	SServer sServer;
-	sServer.create(5555);
+	sServer.create(6969);
 }
 
 

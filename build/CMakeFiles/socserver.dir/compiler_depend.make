@@ -248,6 +248,453 @@ CMakeFiles/socserver.dir/main.cpp.o: /home/afz/workzone/socket/mongo-eclipse-ws/
   /usr/include/c++/9/bits/stl_multimap.h \
   /usr/include/c++/9/bits/erase_if.h
 
+CMakeFiles/socserver.dir/model/ObjectInfo.cpp.o: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/model/ObjectInfo.cpp \
+  /usr/include/stdc-predef.h \
+  /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/model/ObjectInfo.h \
+  /usr/include/c++/9/string \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+  /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/bits/memoryfwd.h \
+  /usr/include/c++/9/bits/char_traits.h \
+  /usr/include/c++/9/bits/stl_algobase.h \
+  /usr/include/c++/9/bits/functexcept.h \
+  /usr/include/c++/9/bits/exception_defines.h \
+  /usr/include/c++/9/bits/cpp_type_traits.h \
+  /usr/include/c++/9/ext/type_traits.h \
+  /usr/include/c++/9/ext/numeric_traits.h \
+  /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/move.h \
+  /usr/include/c++/9/bits/concept_check.h \
+  /usr/include/c++/9/type_traits \
+  /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/9/debug/assertions.h \
+  /usr/include/c++/9/bits/stl_iterator.h \
+  /usr/include/c++/9/bits/ptr_traits.h \
+  /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/bits/predefined_ops.h \
+  /usr/include/c++/9/bits/postypes.h \
+  /usr/include/c++/9/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/9/cstdint \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/9/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+  /usr/include/c++/9/ext/new_allocator.h \
+  /usr/include/c++/9/new \
+  /usr/include/c++/9/exception \
+  /usr/include/c++/9/bits/exception.h \
+  /usr/include/c++/9/bits/exception_ptr.h \
+  /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/typeinfo \
+  /usr/include/c++/9/bits/hash_bytes.h \
+  /usr/include/c++/9/bits/nested_exception.h \
+  /usr/include/c++/9/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
+  /usr/include/c++/9/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/9/iosfwd \
+  /usr/include/c++/9/cctype \
+  /usr/include/ctype.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/c++/9/bits/ostream_insert.h \
+  /usr/include/c++/9/bits/cxxabi_forced.h \
+  /usr/include/c++/9/bits/stl_function.h \
+  /usr/include/c++/9/backward/binders.h \
+  /usr/include/c++/9/bits/stl_algo.h \
+  /usr/include/c++/9/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/9/bits/std_abs.h \
+  /usr/include/c++/9/bits/algorithmfwd.h \
+  /usr/include/c++/9/initializer_list \
+  /usr/include/c++/9/bits/stl_heap.h \
+  /usr/include/c++/9/bits/stl_tempbuf.h \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/ext/alloc_traits.h \
+  /usr/include/c++/9/bits/alloc_traits.h \
+  /usr/include/c++/9/bits/uniform_int_dist.h \
+  /usr/include/c++/9/limits \
+  /usr/include/c++/9/bits/range_access.h \
+  /usr/include/c++/9/bits/basic_string.h \
+  /usr/include/c++/9/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
+  /usr/include/c++/9/string_view \
+  /usr/include/c++/9/bits/functional_hash.h \
+  /usr/include/c++/9/bits/string_view.tcc \
+  /usr/include/c++/9/ext/string_conversions.h \
+  /usr/include/c++/9/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/c++/9/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/9/bits/basic_string.tcc
+
+CMakeFiles/socserver.dir/server/MongoInstance.cpp.o: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/MongoInstance.cpp \
+  /usr/include/stdc-predef.h \
+  /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/MongoInstance.h \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/uri.hpp \
+  /usr/include/c++/9/memory \
+  /usr/include/c++/9/bits/stl_algobase.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+  /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/c++/9/bits/functexcept.h \
+  /usr/include/c++/9/bits/exception_defines.h \
+  /usr/include/c++/9/bits/cpp_type_traits.h \
+  /usr/include/c++/9/ext/type_traits.h \
+  /usr/include/c++/9/ext/numeric_traits.h \
+  /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/move.h \
+  /usr/include/c++/9/bits/concept_check.h \
+  /usr/include/c++/9/type_traits \
+  /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/9/debug/assertions.h \
+  /usr/include/c++/9/bits/stl_iterator.h \
+  /usr/include/c++/9/bits/ptr_traits.h \
+  /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/bits/predefined_ops.h \
+  /usr/include/c++/9/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+  /usr/include/c++/9/ext/new_allocator.h \
+  /usr/include/c++/9/new \
+  /usr/include/c++/9/exception \
+  /usr/include/c++/9/bits/exception.h \
+  /usr/include/c++/9/bits/exception_ptr.h \
+  /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/include/c++/9/typeinfo \
+  /usr/include/c++/9/bits/hash_bytes.h \
+  /usr/include/c++/9/bits/nested_exception.h \
+  /usr/include/c++/9/bits/memoryfwd.h \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/ext/alloc_traits.h \
+  /usr/include/c++/9/bits/alloc_traits.h \
+  /usr/include/c++/9/bits/stl_uninitialized.h \
+  /usr/include/c++/9/utility \
+  /usr/include/c++/9/bits/stl_relops.h \
+  /usr/include/c++/9/initializer_list \
+  /usr/include/c++/9/bits/stl_tempbuf.h \
+  /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/9/iosfwd \
+  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/bits/postypes.h \
+  /usr/include/c++/9/cwchar \
+  /usr/include/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/c++/9/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
+  /usr/include/c++/9/ext/concurrence.h \
+  /usr/include/c++/9/bits/stl_function.h \
+  /usr/include/c++/9/backward/binders.h \
+  /usr/include/c++/9/bits/uses_allocator.h \
+  /usr/include/c++/9/bits/unique_ptr.h \
+  /usr/include/c++/9/tuple \
+  /usr/include/c++/9/array \
+  /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/string \
+  /usr/include/c++/9/bits/char_traits.h \
+  /usr/include/c++/9/cstdint \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/9/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
+  /usr/include/c++/9/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/9/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/9/bits/ostream_insert.h \
+  /usr/include/c++/9/bits/cxxabi_forced.h \
+  /usr/include/c++/9/bits/stl_algo.h \
+  /usr/include/c++/9/cstdlib \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/9/bits/std_abs.h \
+  /usr/include/c++/9/bits/algorithmfwd.h \
+  /usr/include/c++/9/bits/stl_heap.h \
+  /usr/include/c++/9/bits/uniform_int_dist.h \
+  /usr/include/c++/9/limits \
+  /usr/include/c++/9/bits/range_access.h \
+  /usr/include/c++/9/bits/basic_string.h \
+  /usr/include/c++/9/string_view \
+  /usr/include/c++/9/bits/functional_hash.h \
+  /usr/include/c++/9/bits/string_view.tcc \
+  /usr/include/c++/9/ext/string_conversions.h \
+  /usr/include/c++/9/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/c++/9/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/9/bits/basic_string.tcc \
+  /usr/include/c++/9/bits/invoke.h \
+  /usr/include/c++/9/bits/shared_ptr.h \
+  /usr/include/c++/9/bits/shared_ptr_base.h \
+  /usr/include/c++/9/bits/allocated_ptr.h \
+  /usr/include/c++/9/bits/refwrap.h \
+  /usr/include/c++/9/ext/aligned_buffer.h \
+  /usr/include/c++/9/bits/shared_ptr_atomic.h \
+  /usr/include/c++/9/bits/atomic_base.h \
+  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/9/backward/auto_ptr.h \
+  /usr/include/c++/9/bit \
+  /usr/include/c++/9/pstl/glue_memory_defs.h \
+  /usr/include/c++/9/pstl/execution_defs.h \
+  /usr/include/c++/9/vector \
+  /usr/include/c++/9/bits/stl_vector.h \
+  /usr/include/c++/9/bits/stl_bvector.h \
+  /usr/include/c++/9/bits/vector.tcc \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/view.hpp \
+  /usr/include/c++/9/cstddef \
+  /usr/include/c++/9/iterator \
+  /usr/include/c++/9/ostream \
+  /usr/include/c++/9/ios \
+  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/locale_classes.h \
+  /usr/include/c++/9/bits/locale_classes.tcc \
+  /usr/include/c++/9/system_error \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
+  /usr/include/c++/9/streambuf \
+  /usr/include/c++/9/bits/streambuf.tcc \
+  /usr/include/c++/9/bits/basic_ios.h \
+  /usr/include/c++/9/bits/locale_facets.h \
+  /usr/include/c++/9/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h \
+  /usr/include/c++/9/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
+  /usr/include/c++/9/bits/locale_facets.tcc \
+  /usr/include/c++/9/bits/basic_ios.tcc \
+  /usr/include/c++/9/bits/ostream.tcc \
+  /usr/include/c++/9/istream \
+  /usr/include/c++/9/bits/istream.tcc \
+  /usr/include/c++/9/bits/stream_iterator.h \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/element.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/stdx/optional.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/prelude.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/compiler.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/config.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/export.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/version.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/optional.hpp \
+  /usr/include/c++/9/functional \
+  /usr/include/c++/9/bits/std_function.h \
+  /usr/include/c++/9/unordered_map \
+  /usr/include/c++/9/bits/hashtable.h \
+  /usr/include/c++/9/bits/hashtable_policy.h \
+  /usr/include/c++/9/bits/node_handle.h \
+  /usr/include/c++/9/optional \
+  /usr/include/c++/9/bits/enable_special_members.h \
+  /usr/include/c++/9/bits/unordered_map.h \
+  /usr/include/c++/9/bits/erase_if.h \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/type_traits.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/functional.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/utility.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/postlude.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/stdx/string_view.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/string.hpp \
+  /usr/include/c++/9/algorithm \
+  /usr/include/c++/9/pstl/glue_algorithm_defs.h \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/string/view_or_value.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/view_or_value.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/read_concern.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/value.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/view.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/element.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/stdx/type_traits.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/transaction.hpp \
+  /usr/include/c++/9/chrono \
+  /usr/include/c++/9/ratio \
+  /usr/include/c++/9/ctime \
+  /usr/include/c++/9/bits/parse_numbers.h \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/stdx.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/prelude.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/compiler.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/config.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/export.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/version.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/postlude.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/read_preference.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/view_or_value.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/value.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/view_or_value.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/write_concern.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/instance.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/pool.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/pool.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/client.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/apm.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/command_failed_event.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/oid.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/command_started_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/command_succeeded_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_failed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_started_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_succeeded_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/server_changed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/server_description.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/server_closed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/server_opening_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_changed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_description.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_closed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_opening_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/auto_encryption.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/server_api.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/tls.hpp \
+  /usr/include/c++/9/iostream
+
 CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/SServer.cpp \
   /usr/include/stdc-predef.h \
   /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/SServer.h \
@@ -639,32 +1086,385 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
   /usr/local/include/mongocxx/v_noabi/mongocxx/options/tls.hpp \
   /usr/local/include/mongocxx/v_noabi/mongocxx/options/client_encryption.hpp \
   /usr/local/include/mongocxx/v_noabi/mongocxx/uri.hpp \
-  /usr/local/include/mongocxx/v_noabi/mongocxx/instance.hpp
+  /usr/local/include/mongocxx/v_noabi/mongocxx/instance.hpp \
+  /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/mongo.h \
+  /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/MongoInstance.h \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/pool.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/pool.hpp
+
+CMakeFiles/socserver.dir/server/mongo.cpp.o: /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/mongo.cpp \
+  /usr/include/stdc-predef.h \
+  /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/mongo.h \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/document.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/impl.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/sub_array.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/helpers.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/concatenate.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/view_or_value.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/value.hpp \
+  /usr/include/c++/9/cstdlib \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
+  /usr/include/features.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+  /usr/include/c++/9/pstl/pstl_config.h \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/alloca.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/c++/9/bits/std_abs.h \
+  /usr/include/c++/9/memory \
+  /usr/include/c++/9/bits/stl_algobase.h \
+  /usr/include/c++/9/bits/functexcept.h \
+  /usr/include/c++/9/bits/exception_defines.h \
+  /usr/include/c++/9/bits/cpp_type_traits.h \
+  /usr/include/c++/9/ext/type_traits.h \
+  /usr/include/c++/9/ext/numeric_traits.h \
+  /usr/include/c++/9/bits/stl_pair.h \
+  /usr/include/c++/9/bits/move.h \
+  /usr/include/c++/9/bits/concept_check.h \
+  /usr/include/c++/9/type_traits \
+  /usr/include/c++/9/bits/stl_iterator_base_types.h \
+  /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/9/debug/assertions.h \
+  /usr/include/c++/9/bits/stl_iterator.h \
+  /usr/include/c++/9/bits/ptr_traits.h \
+  /usr/include/c++/9/debug/debug.h \
+  /usr/include/c++/9/bits/predefined_ops.h \
+  /usr/include/c++/9/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+  /usr/include/c++/9/ext/new_allocator.h \
+  /usr/include/c++/9/new \
+  /usr/include/c++/9/exception \
+  /usr/include/c++/9/bits/exception.h \
+  /usr/include/c++/9/bits/exception_ptr.h \
+  /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/typeinfo \
+  /usr/include/c++/9/bits/hash_bytes.h \
+  /usr/include/c++/9/bits/nested_exception.h \
+  /usr/include/c++/9/bits/memoryfwd.h \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/ext/alloc_traits.h \
+  /usr/include/c++/9/bits/alloc_traits.h \
+  /usr/include/c++/9/bits/stl_uninitialized.h \
+  /usr/include/c++/9/utility \
+  /usr/include/c++/9/bits/stl_relops.h \
+  /usr/include/c++/9/initializer_list \
+  /usr/include/c++/9/bits/stl_tempbuf.h \
+  /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/9/iosfwd \
+  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/bits/postypes.h \
+  /usr/include/c++/9/cwchar \
+  /usr/include/wchar.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/c++/9/ext/atomicity.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/sched.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
+  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
+  /usr/include/time.h \
+  /usr/include/x86_64-linux-gnu/bits/time.h \
+  /usr/include/x86_64-linux-gnu/bits/timex.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
+  /usr/include/c++/9/ext/concurrence.h \
+  /usr/include/c++/9/bits/stl_function.h \
+  /usr/include/c++/9/backward/binders.h \
+  /usr/include/c++/9/bits/uses_allocator.h \
+  /usr/include/c++/9/bits/unique_ptr.h \
+  /usr/include/c++/9/tuple \
+  /usr/include/c++/9/array \
+  /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/string \
+  /usr/include/c++/9/bits/char_traits.h \
+  /usr/include/c++/9/cstdint \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
+  /usr/include/stdint.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/9/bits/localefwd.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
+  /usr/include/c++/9/clocale \
+  /usr/include/locale.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/9/cctype \
+  /usr/include/ctype.h \
+  /usr/include/c++/9/bits/ostream_insert.h \
+  /usr/include/c++/9/bits/cxxabi_forced.h \
+  /usr/include/c++/9/bits/stl_algo.h \
+  /usr/include/c++/9/bits/algorithmfwd.h \
+  /usr/include/c++/9/bits/stl_heap.h \
+  /usr/include/c++/9/bits/uniform_int_dist.h \
+  /usr/include/c++/9/limits \
+  /usr/include/c++/9/bits/range_access.h \
+  /usr/include/c++/9/bits/basic_string.h \
+  /usr/include/c++/9/string_view \
+  /usr/include/c++/9/bits/functional_hash.h \
+  /usr/include/c++/9/bits/string_view.tcc \
+  /usr/include/c++/9/ext/string_conversions.h \
+  /usr/include/c++/9/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+  /usr/include/c++/9/cerrno \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/c++/9/bits/basic_string.tcc \
+  /usr/include/c++/9/bits/invoke.h \
+  /usr/include/c++/9/bits/shared_ptr.h \
+  /usr/include/c++/9/bits/shared_ptr_base.h \
+  /usr/include/c++/9/bits/allocated_ptr.h \
+  /usr/include/c++/9/bits/refwrap.h \
+  /usr/include/c++/9/ext/aligned_buffer.h \
+  /usr/include/c++/9/bits/shared_ptr_atomic.h \
+  /usr/include/c++/9/bits/atomic_base.h \
+  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+  /usr/include/c++/9/backward/auto_ptr.h \
+  /usr/include/c++/9/bit \
+  /usr/include/c++/9/pstl/glue_memory_defs.h \
+  /usr/include/c++/9/pstl/execution_defs.h \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/view.hpp \
+  /usr/include/c++/9/cstddef \
+  /usr/include/c++/9/iterator \
+  /usr/include/c++/9/ostream \
+  /usr/include/c++/9/ios \
+  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/locale_classes.h \
+  /usr/include/c++/9/bits/locale_classes.tcc \
+  /usr/include/c++/9/system_error \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
+  /usr/include/c++/9/streambuf \
+  /usr/include/c++/9/bits/streambuf.tcc \
+  /usr/include/c++/9/bits/basic_ios.h \
+  /usr/include/c++/9/bits/locale_facets.h \
+  /usr/include/c++/9/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h \
+  /usr/include/c++/9/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
+  /usr/include/c++/9/bits/locale_facets.tcc \
+  /usr/include/c++/9/bits/basic_ios.tcc \
+  /usr/include/c++/9/bits/ostream.tcc \
+  /usr/include/c++/9/istream \
+  /usr/include/c++/9/bits/istream.tcc \
+  /usr/include/c++/9/bits/stream_iterator.h \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/element.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/element.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/stdx/optional.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/prelude.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/compiler.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/config.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/export.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/version.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/optional.hpp \
+  /usr/include/c++/9/functional \
+  /usr/include/c++/9/bits/std_function.h \
+  /usr/include/c++/9/unordered_map \
+  /usr/include/c++/9/bits/hashtable.h \
+  /usr/include/c++/9/bits/hashtable_policy.h \
+  /usr/include/c++/9/bits/node_handle.h \
+  /usr/include/c++/9/optional \
+  /usr/include/c++/9/bits/enable_special_members.h \
+  /usr/include/c++/9/bits/unordered_map.h \
+  /usr/include/c++/9/bits/erase_if.h \
+  /usr/include/c++/9/vector \
+  /usr/include/c++/9/bits/stl_vector.h \
+  /usr/include/c++/9/bits/stl_bvector.h \
+  /usr/include/c++/9/bits/vector.tcc \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/type_traits.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/functional.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/utility.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/config/postlude.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/stdx/string_view.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/string.hpp \
+  /usr/include/c++/9/algorithm \
+  /usr/include/c++/9/pstl/glue_algorithm_defs.h \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/view.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/value.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/stdx/type_traits.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/view_or_value.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/view_or_value.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/core.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/types.hpp \
+  /usr/include/c++/9/chrono \
+  /usr/include/c++/9/ratio \
+  /usr/include/c++/9/ctime \
+  /usr/include/c++/9/bits/parse_numbers.h \
+  /usr/include/c++/9/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/decimal128.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/oid.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/enums/type.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/enums/binary_sub_type.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/sub_document.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/kvp.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/json.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/client.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/client_session.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/client_session.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/transaction.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/stdx.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/prelude.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/compiler.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/config.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/export.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/version.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/config/postlude.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/database.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/string/view_or_value.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/collection.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/array.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/bulk_write.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/model/write.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/model/delete_many.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/hint.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/types/bson_value/view.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/model/delete_one.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/model/insert_one.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/model/replace_one.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/model/update_many.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/pipeline.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/model/update_one.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/write_type.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/bulk_write.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/types/bson_value/view_or_value.hpp \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/types/bson_value/value.hpp \
+  /usr/include/c++/9/iostream \
+  /usr/local/include/bsoncxx/v_noabi/bsoncxx/stdx/make_unique.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/write_concern.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/result/bulk_write.hpp \
+  /usr/include/c++/9/map \
+  /usr/include/c++/9/bits/stl_tree.h \
+  /usr/include/c++/9/bits/stl_map.h \
+  /usr/include/c++/9/bits/stl_multimap.h \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/change_stream.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/cursor.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/index_view.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/index_model.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/index.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/index_view.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/aggregate.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/read_concern.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/read_preference.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/change_stream.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/count.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/delete.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/distinct.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/estimated_document_count.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/find.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/find_one_and_delete.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/find_one_and_replace.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/find_one_common_options.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/find_one_and_update.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/insert.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/replace.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/update.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/result/delete.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/result/insert_many.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/result/insert_one.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/result/replace_one.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/result/update.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/search_index_view.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/search_index_model.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/gridfs/bucket.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/gridfs/downloader.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/gridfs/uploader.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/result/gridfs/upload.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/gridfs/bucket.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/gridfs/upload.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/create_collection.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/validation_criteria.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/client.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/apm.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/command_failed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/command_started_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/command_succeeded_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_failed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_started_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_succeeded_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/server_changed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/server_description.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/server_closed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/server_opening_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_changed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_description.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_closed_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_opening_event.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/auto_encryption.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/server_api.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/tls.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/client_encryption.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/uri.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/instance.hpp \
+  /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/model/ObjectInfo.h \
+  /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/MongoInstance.h \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/pool.hpp \
+  /usr/local/include/mongocxx/v_noabi/mongocxx/options/pool.hpp
 
 
-/usr/local/include/mongocxx/v_noabi/mongocxx/instance.hpp:
+/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/mongo.h:
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/client_encryption.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/options/auto_encryption.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_opening_event.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_closed_event.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_changed_event.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_succeeded_event.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_started_event.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_failed_event.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/events/command_succeeded_event.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/events/command_started_event.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/events/command_failed_event.hpp:
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/create_collection.hpp:
 
@@ -698,8 +1498,6 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/change_stream.hpp:
 
-/usr/local/include/mongocxx/v_noabi/mongocxx/read_preference.hpp:
-
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/aggregate.hpp:
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/index_view.hpp:
@@ -711,8 +1509,6 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 /usr/local/include/mongocxx/v_noabi/mongocxx/index_view.hpp:
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/change_stream.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/write_concern.hpp:
 
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/types/bson_value/value.hpp:
 
@@ -730,20 +1526,6 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/database.hpp:
 
-/usr/local/include/mongocxx/v_noabi/mongocxx/config/export.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/config/config.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/config/compiler.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/options/replace.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/config/prelude.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/stdx.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/options/transaction.hpp:
-
 /usr/local/include/mongocxx/v_noabi/mongocxx/client.hpp:
 
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/json.hpp:
@@ -758,19 +1540,69 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/enums/type.hpp:
 
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/oid.hpp:
-
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/decimal128.hpp:
 
 /usr/include/c++/9/cstring:
 
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/core.hpp:
 
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/helpers.hpp:
+
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/impl.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/options/auto_encryption.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_opening_event.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_closed_event.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/events/topology_changed_event.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_succeeded_event.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_started_event.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_failed_event.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/events/command_succeeded_event.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/events/command_started_event.hpp:
+
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/oid.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/events/command_failed_event.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/pool.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/instance.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/write_concern.hpp:
+
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/concatenate.hpp:
+
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/array/value.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/read_preference.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/config/export.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/config/config.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/config/compiler.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/options/replace.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/config/prelude.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/stdx.hpp:
+
+/usr/local/include/mongocxx/v_noabi/mongocxx/options/transaction.hpp:
+
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/array/element.hpp:
+
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/server_api.hpp:
 
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/view_or_value.hpp:
-
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/document/view.hpp:
 
 /usr/include/c++/9/pstl/glue_algorithm_defs.h:
 
@@ -783,14 +1615,6 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/utility.hpp:
 
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc/core/type_traits.hpp:
-
-/usr/include/c++/9/bits/vector.tcc:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/result/delete.hpp:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/bulk_write.hpp:
-
-/usr/include/c++/9/vector:
 
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/stdx/make_unique.hpp:
 
@@ -817,8 +1641,6 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/stdx/optional.hpp:
 
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/element.hpp:
-
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/array/element.hpp:
 
 /usr/include/c++/9/bits/stream_iterator.h:
 
@@ -854,11 +1676,11 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/include/c++/9/ext/atomicity.h:
 
-/usr/include/c++/9/cwchar:
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/array/view_or_value.hpp:
 
 /usr/include/c++/9/bits/range_access.h:
 
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/array/view_or_value.hpp:
+/usr/include/c++/9/cwchar:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
@@ -891,10 +1713,6 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/c++/9/bits/stl_bvector.h:
-
-/usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -966,13 +1784,13 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/include/c++/9/bits/stl_uninitialized.h:
 
+/usr/include/stdlib.h:
+
+/usr/include/c++/9/bits/stl_bvector.h:
+
 /usr/include/c++/9/bits/streambuf.tcc:
 
 /usr/include/c++/9/bits/allocator.h:
-
-/usr/local/include/mongocxx/v_noabi/mongocxx/uri.hpp:
-
-/usr/include/c++/9/bits/move.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
@@ -993,6 +1811,10 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 /usr/include/asm-generic/socket.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/array/view.hpp:
+
+/usr/include/c++/9/bits/char_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -1016,17 +1838,19 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/document/view.hpp:
+
 /usr/include/c++/9/ext/concurrence.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/mongo.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/c++/9/bits/atomic_base.h:
 
 /usr/include/c++/9/bits/exception_defines.h:
-
-/usr/include/c++/9/pstl/pstl_config.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
@@ -1053,6 +1877,10 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/find.hpp:
 
 /usr/include/c++/9/utility:
+
+/usr/include/c++/9/pstl/pstl_config.h:
+
+/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/MongoInstance.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
@@ -1091,6 +1919,8 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:
 
 /usr/include/c++/9/bits/erase_if.h:
+
+/usr/include/c++/9/bits/vector.tcc:
 
 /usr/include/c++/9/bits/stringfwd.h:
 
@@ -1164,8 +1994,6 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/include/netinet/in.h:
 
-/usr/include/c++/9/ext/numeric_traits.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/view_or_value.hpp:
@@ -1177,6 +2005,10 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 /usr/include/endian.h:
 
 /usr/include/stdint.h:
+
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/document.hpp:
+
+/usr/include/c++/9/bits/exception_ptr.h:
 
 /usr/include/linux/posix_types.h:
 
@@ -1314,6 +2146,12 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/include/asm-generic/bitsperlong.h:
 
+/usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/sub_array.hpp:
+
+/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/SServer.cpp:
+
+/usr/include/c++/9/ext/aligned_buffer.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/asm/sockios.h:
@@ -1358,6 +2196,8 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/include/c++/9/bits/unique_ptr.h:
 
+/usr/local/include/mongocxx/v_noabi/mongocxx/options/pool.hpp:
+
 /usr/include/c++/9/bits/stl_function.h:
 
 /usr/include/c++/9/tuple:
@@ -1382,12 +2222,6 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/include/c++/9/bits/atomic_lockfree_defines.h:
 
-/usr/include/c++/9/bits/stl_vector.h:
-
-/usr/include/c++/9/cstdint:
-
-/usr/include/c++/9/bits/stl_tree.h:
-
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/insert.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
@@ -1406,24 +2240,24 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
 
 /usr/include/c++/9/bits/node_handle.h:
 
-/usr/include/c++/9/bits/exception_ptr.h:
+/usr/include/c++/9/ext/numeric_traits.h:
 
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/document.hpp:
+/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/model/ObjectInfo.cpp:
 
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/impl.hpp:
+/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/MongoInstance.cpp:
 
-/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/SServer.cpp:
+/usr/include/c++/9/bits/move.h:
 
-/usr/include/c++/9/ext/aligned_buffer.h:
+/usr/local/include/mongocxx/v_noabi/mongocxx/uri.hpp:
 
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/sub_array.hpp:
+/usr/include/c++/9/cstdint:
 
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/helpers.hpp:
+/usr/include/c++/9/bits/stl_tree.h:
 
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/array/value.hpp:
+/usr/include/c++/9/bits/stl_vector.h:
 
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/concatenate.hpp:
+/usr/local/include/mongocxx/v_noabi/mongocxx/result/delete.hpp:
 
-/usr/include/c++/9/bits/char_traits.h:
+/usr/local/include/mongocxx/v_noabi/mongocxx/bulk_write.hpp:
 
-/usr/local/include/bsoncxx/v_noabi/bsoncxx/array/view.hpp:
+/usr/include/c++/9/vector:

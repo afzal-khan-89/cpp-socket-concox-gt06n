@@ -18,7 +18,11 @@ endif()
 
 find_package(mongocxx REQUIRED)
 
-add_executable(${PROJECT_NAME} main.cpp  ${CMAKE_CURRENT_SOURCE_DIR}/server/SServer.cpp )
+add_executable(${PROJECT_NAME} main.cpp 
+					 ${CMAKE_CURRENT_SOURCE_DIR}/server/SServer.cpp 
+					 ${CMAKE_CURRENT_SOURCE_DIR}/server/mongo.cpp
+					 ${CMAKE_CURRENT_SOURCE_DIR}/server/MongoInstance.cpp 
+					  ${CMAKE_CURRENT_SOURCE_DIR}/model/ObjectInfo.cpp)
 
 # Visual Studio pre 2017 requires boost polyfill.
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC" AND CMAKE_CXX_STANDARD LESS 17)
