@@ -337,6 +337,15 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: \
  /usr/local/include/mongocxx/v_noabi/mongocxx/options/client_encryption.hpp \
  /usr/local/include/mongocxx/v_noabi/mongocxx/uri.hpp \
  /usr/local/include/mongocxx/v_noabi/mongocxx/instance.hpp \
+ /usr/include/c++/9/iomanip /usr/include/c++/9/locale \
+ /usr/include/c++/9/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/9/bits/codecvt.h \
+ /usr/include/c++/9/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/9/bits/locale_conv.h \
+ /usr/include/c++/9/bits/quoted_string.h /usr/include/c++/9/sstream \
+ /usr/include/c++/9/bits/sstream.tcc \
  /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/mongo.h \
  /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/MongoInstance.h \
  /usr/local/include/mongocxx/v_noabi/mongocxx/pool.hpp \

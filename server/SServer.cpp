@@ -18,6 +18,10 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
+#include <ctime>
+#include <iomanip>
+#include <iostream>
+#include <sstream>
 
 #include "mongo.h"
 #include "MongoInstance.h"
@@ -26,6 +30,8 @@ using bsoncxx::builder::basic::kvp;
 using bsoncxx::builder::basic::make_array;
 using bsoncxx::builder::basic::make_document;
 
+using namespace std;
+
 
 #define PROTOCOL_NO_LOGIN       	0x01
 #define PROTOCOL_HEARTBIT       	0x13
@@ -33,21 +39,22 @@ using bsoncxx::builder::basic::make_document;
 #define PROTOCOL_ALARM 				0x16
 
 
+
 typedef struct{
 	 char imei[18];
-	 char time[12];
+	 long time;
 	 char latitude[16];
 	 char longitude[16];
 	 char data_status[2];
-	 char speed[2] ;
+	 int  speed ;
 	 char fuel[6];
 	 char temp[6];
 	 char gsm_strength[6];
-	 char sat_view[6];
+	 int sat_view;
 	 char hdop[12];
 	 char pdop[12];
-	 char course[12];
-	 char sensor ;
+	 int course;
+	 char sensor[3] ;
 }Vehicle_info_t;
 
 typedef struct{
@@ -159,8 +166,6 @@ void parse_login_packet(Packet_t * packet, Vehicle_info_t *vehicle)
 void parse_hartbit_packet(Packet_t * packet, Vehicle_info_t *vehicle)
 {
 	uint16_t crc ;
-	printf("hartbit-packet\n");
-
 	packet->resp_packet[0] = 0x78;			    //start byte
 	packet->resp_packet[1] = 0x78;			    //start byte
 	packet->resp_packet[2] = 5 ;			    //length
@@ -187,21 +192,34 @@ void parse_location_packet(Packet_t * packet, Vehicle_info_t *vehicle)
     uint16_t cal_crc ;
     uint16_t rcv_crc ;
 
-	memset(vehicle->time, 0, sizeof(vehicle->time));
-	memcpy(vehicle->time, &packet->src[2], 6);
-  	memcpy(vehicle->course,  &packet->src[18], 2);
+    printf("dbg1" );
+    struct tm t = {0};  // Initalize to all 0's
+    memset(&t, 0, sizeof(tm)); // Initalize to all 0's
+    t.tm_year = 100+packet->src[2];  // This is year-1900, so 112 = 2012
+    t.tm_mon = packet->src[3];
+    t.tm_mday = packet->src[4];
+    t.tm_hour = packet->src[5];
+    t.tm_min = packet->src[6];
+    t.tm_sec = packet->src[7];
 
-	vehicle->sat_view[0] = packet->src[8];
-	vehicle->speed[0]  = packet->src[17];
+    time_t time_epoch = mktime(&t);
+    vehicle->time = (long)time_epoch;
 
-    cal_crc = GetCrc16(&packet->src[2], 30) ;
-    rcv_crc  = (0xff00 & (packet->src[32] << 8)) ;
-    rcv_crc  |= (0x00ff &  packet->src[33]);
+    printf("TIME : %u \n", vehicle->time );
 
-    printf("location packet : rvc_crc %d  and  cal_crc  %d\n", rcv_crc , cal_crc);
+  	//memcpy(vehicle->course,  &packet->src[18], 2);
+    vehicle->sat_view = packet->src[8];
+
+    cal_crc = GetCrc16(&packet->src[0], 30) ;
+    rcv_crc  = (0xff00 & (packet->src[30] << 8)) ;
+    rcv_crc  |= (0x00ff &  packet->src[31]);
+
+    printf("location packet rvc_crc %d  and  cal_crc  %d\n", rcv_crc , cal_crc);
 
     if( rcv_crc == cal_crc)
     {
+    	vehicle->speed = packet->src[17];
+
     	lat_int =  (0xff000000  &  (packet->src[9] << 24)) ;
     	lat_int |= (0x00ff0000  &  (packet->src[10] << 16)) ;
     	lat_int |= (0x0000ff00  &  (packet->src[11] << 8)) ;
@@ -221,57 +239,63 @@ void parse_location_packet(Packet_t * packet, Vehicle_info_t *vehicle)
     	//printf("latitude %.6f  longitude %.6f  speed %d  \n", lat_f, lon_f,  speed);
     	sprintf((char*)vehicle->latitude, "%f", lat_f);
     	sprintf((char*)vehicle->longitude, "%f", lon_f);
-       // printf("latitudef %.6f  longitudef %.6f  speed %d  \n", lat_f, lon_f,  speed);
-        printf("location packet :  lat %.6f  lon %.6f  speed %c time %s  \n", vehicle->latitude,  vehicle->longitude, vehicle->speed, vehicle->time );
+
+        printf("latitudef %.6f  longitudef %.6f  \n", lat_f, lon_f);
+        printf("speed %d \n", vehicle->speed);
+
+        printf("location packet :  lat %.6f  lon %.6f \n", vehicle->latitude,  vehicle->longitude );
     }
+
+ //   printf("location packet : time  "); for(int i=0; i<6; i++) { printf("%x  ",  vehicle->time[i]); } printf("\n");
+
 }
 void parse_alarm_pacet(Packet_t * packet, Vehicle_info_t *vehicle)
 {
-    double lat_f, lon_f ;
-    int lat_int, long_int ;
-
-    uint16_t rvc_crc ;
-	uint16_t cal_crc ;
-
-	memset(vehicle->time, 0, sizeof(vehicle->time));
-	memcpy(vehicle->time, &packet->src[2], 6);
-  	memcpy(vehicle->course,  &packet->src[18], 2);
-
-  	vehicle->sat_view[0] = packet->src[8];;
-  	vehicle->speed[0] =  packet->src[17];
-
-  	vehicle->course[0] =  packet->src[18];
- 	vehicle->course[1] =  packet->src[19];
-
- 	rvc_crc   = (0xff00 & (packet->src[32] << 8)) ;
- 	rvc_crc  |= (0x00ff & packet->src[33]);
-
- 	cal_crc = GetCrc16(&packet->src[2], 30) ;
-
-    printf("alarm packet : rvc_crc %d  and  cal_crc  %d\n", rvc_crc, cal_crc);
-
-	if(rvc_crc == cal_crc)
-	{
-		lat_int =  (0xff000000  &  (packet->src[11] << 24)) ;
-		lat_int |= (0x00ff0000  &  (packet->src[12] << 16)) ;
-		lat_int |= (0x0000ff00  &  (packet->src[13] << 8)) ;
-		lat_int |= (0x000000ff  &  (packet->src[14] )) ;
-
-		long_int =  (0xff000000  &  (packet->src[13] << 24)) ;
-		long_int |= (0x00ff0000  &  (packet->src[14] << 16)) ;
-		long_int |= (0x0000ff00  &  (packet->src[15] << 8)) ;
-		long_int |= (0x000000ff  &  packet->src[16] ) ;
-
-		lat_f = lat_int ;
-		lon_f = long_int;
-
-		lat_f /= 1800000 ;
-		lon_f /= 1800000 ;
-
-	    sprintf((char*)vehicle->latitude, "%f", lat_f);
-	    sprintf((char*)vehicle->longitude, "%f", lon_f);
-	}
-    printf("alarm packet : lat %.6f  lon %.6f  time %s  speed %s \n", vehicle->latitude, vehicle->longitude,  vehicle->time, vehicle->speed);
+//    double lat_f, lon_f ;
+//    int lat_int, long_int ;
+//
+//    uint16_t rvc_crc ;
+//	uint16_t cal_crc ;
+//
+//	memset(vehicle->time, 0, sizeof(vehicle->time));
+//	memcpy(vehicle->time, &packet->src[2], 6);
+//  	memcpy(vehicle->course,  &packet->src[18], 2);
+//
+//  	vehicle->sat_view[0] = packet->src[8];;
+//  	vehicle->speed[0] =  packet->src[17];
+//
+//  	vehicle->course[0] =  packet->src[18];
+// 	vehicle->course[1] =  packet->src[19];
+//
+// 	rvc_crc   = (0xff00 & (packet->src[30] << 8)) ;
+// 	rvc_crc  |= (0x00ff & packet->src[30]);
+//
+// 	cal_crc = GetCrc16(&packet->src[0], 30) ;
+//
+//    printf("alarm packet : rvc_crc %d  and  cal_crc  %d\n", rvc_crc, cal_crc);
+//
+//	if(rvc_crc == cal_crc)
+//	{
+//		lat_int =  (0xff000000  &  (packet->src[9] << 24)) ;
+//		lat_int |= (0x00ff0000  &  (packet->src[10] << 16)) ;
+//		lat_int |= (0x0000ff00  &  (packet->src[11] << 8)) ;
+//		lat_int |= (0x000000ff  &  (packet->src[12] )) ;
+//
+//		long_int =  (0xff000000  &  (packet->src[13] << 24)) ;
+//		long_int |= (0x00ff0000  &  (packet->src[14] << 16)) ;
+//		long_int |= (0x0000ff00  &  (packet->src[15] << 8)) ;
+//		long_int |= (0x000000ff  &  packet->src[16] ) ;
+//
+//		lat_f = lat_int ;
+//		lon_f = long_int;
+//
+//		lat_f /= 1800000 ;
+//		lon_f /= 1800000 ;
+//
+//	    sprintf((char*)vehicle->latitude, "%f", lat_f);
+//	    sprintf((char*)vehicle->longitude, "%f", lon_f);
+//	}
+//    printf("alarm packet : lat %.6f  lon %.6f  time %s  speed %s \n", vehicle->latitude, vehicle->longitude,  vehicle->time, vehicle->speed);
 }
 
 
@@ -297,19 +321,20 @@ void handle_connection(int sockfd)
 
 
     memset(buffer, 0, 10240);
-    memset(vehicle.time, 0, sizeof(vehicle.time));
+    //memset(vehicle.time, 0, sizeof(vehicle.time));
     memset(vehicle.imei, 0, sizeof(vehicle.imei));
     memset(vehicle.latitude, 0, sizeof(vehicle.latitude));
     memset(vehicle.longitude, 0, sizeof(vehicle.longitude));
-    memset(vehicle.speed, 0, sizeof(vehicle.speed));
+    //memset(vehicle.speed, 0, sizeof(vehicle.speed));
     memset(vehicle.data_status, 0, sizeof(vehicle.data_status));
     memset(vehicle.fuel, 0, sizeof(vehicle.fuel));
     memset(vehicle.temp, 0, sizeof(vehicle.temp));
     memset(vehicle.gsm_strength, 0, sizeof(vehicle.gsm_strength));
-    memset(vehicle.sat_view, 0, sizeof(vehicle.sat_view));
+    //memset(vehicle.sat_view, 0, sizeof(vehicle.sat_view));
     memset(vehicle.hdop, 0, sizeof(vehicle.hdop));
     memset(vehicle.pdop, 0, sizeof(vehicle.pdop));
-    memset(vehicle.course, 0, sizeof(vehicle.course));
+    //memset(vehicle.course, 0, sizeof(vehicle.course));
+    memset(vehicle.sensor, 0, sizeof(vehicle.sensor));
 
     int mongo_update = 0 ;
 
@@ -322,14 +347,14 @@ void handle_connection(int sockfd)
         }
         printf("\n");
 
-    	for(int i=0; i<10240; i++)
+    	for(int idx=0; idx<10240; idx++)
     	{
-    		if(buffer[i]==0x78 && buffer[i+1]==0x78)
+    		if(buffer[idx]==0x78 && buffer[idx+1]==0x78)
     		{
-    			i += 2 ;
-    			packet.src = &buffer[i];
+    			idx += 2 ;
+    			packet.src = &buffer[idx];
 
-    	        switch(buffer[i+1])
+    	        switch(buffer[idx+1])
     	        {
     	        	case PROTOCOL_NO_LOGIN:
     	        		parse_login_packet(&packet, &vehicle);
@@ -345,7 +370,7 @@ void handle_connection(int sockfd)
 
     	        		break;
     	        	case PROTOCOL_LOCATION:
-    	        		printf("location-packet\n");
+    	        		//printf("location-packet\n");
     	        		parse_location_packet(&packet, &vehicle);
     	          		mongo_update  = 1 ;
     	        		break;
@@ -362,7 +387,7 @@ void handle_connection(int sockfd)
     	        {
         	    	auto insert_one_result = _collection.insert_one(make_document(
         	    			kvp("imei", vehicle.imei),
-        	    			kvp("time",  stol(vehicle.time, nullptr, 10)),
+        	    			kvp("time",  vehicle.time),
         	    			kvp("status", vehicle.data_status),
 							kvp("latitude", vehicle.latitude),
 							kvp("longitude", vehicle.longitude),
@@ -373,8 +398,11 @@ void handle_connection(int sockfd)
 							kvp("sat-view", vehicle.sat_view),
 							kvp("hdop", vehicle.hdop),
 							kvp("pdop", vehicle.pdop),
-        	    			kvp("course", vehicle.course)
+        	    			kvp("course", vehicle.course),
+							kvp("sensor", vehicle.sensor)
         	    		));
+
+ //   	        	kvp("time", stol(speed, nullptr, 10))
     	        }
     		}
     	}
@@ -391,7 +419,6 @@ void SServer::create(int port){
 
     mongodbm::MongoInstance::GetInstance()->createPool("mongodb://localhost:27017");
    // mongodbm::MongoDBInstance::GetInstance()->createPool(mongodb_uri_path);
-
 
 
     //Create socket

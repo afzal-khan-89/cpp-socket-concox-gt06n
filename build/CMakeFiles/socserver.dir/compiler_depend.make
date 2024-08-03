@@ -1087,6 +1087,18 @@ CMakeFiles/socserver.dir/server/SServer.cpp.o: /home/afz/workzone/socket/mongo-e
   /usr/local/include/mongocxx/v_noabi/mongocxx/options/client_encryption.hpp \
   /usr/local/include/mongocxx/v_noabi/mongocxx/uri.hpp \
   /usr/local/include/mongocxx/v_noabi/mongocxx/instance.hpp \
+  /usr/include/c++/9/iomanip \
+  /usr/include/c++/9/locale \
+  /usr/include/c++/9/bits/locale_facets_nonio.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /usr/include/c++/9/bits/codecvt.h \
+  /usr/include/c++/9/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/9/bits/locale_conv.h \
+  /usr/include/c++/9/bits/quoted_string.h \
+  /usr/include/c++/9/sstream \
+  /usr/include/c++/9/bits/sstream.tcc \
   /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/mongo.h \
   /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/MongoInstance.h \
   /usr/local/include/mongocxx/v_noabi/mongocxx/pool.hpp \
@@ -1464,6 +1476,16 @@ CMakeFiles/socserver.dir/server/mongo.cpp.o: /home/afz/workzone/socket/mongo-ecl
 
 /home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/server/mongo.h:
 
+/usr/include/c++/9/bits/sstream.tcc:
+
+/usr/include/c++/9/bits/locale_facets_nonio.tcc:
+
+/usr/include/libintl.h:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h:
+
+/usr/include/c++/9/locale:
+
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/client_encryption.hpp:
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/create_collection.hpp:
@@ -1505,6 +1527,8 @@ CMakeFiles/socserver.dir/server/mongo.cpp.o: /home/afz/workzone/socket/mongo-ecl
 /usr/local/include/mongocxx/v_noabi/mongocxx/options/index.hpp:
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/index_model.hpp:
+
+/usr/include/c++/9/bits/locale_conv.h:
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/index_view.hpp:
 
@@ -1561,6 +1585,8 @@ CMakeFiles/socserver.dir/server/mongo.cpp.o: /home/afz/workzone/socket/mongo-ecl
 /usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_succeeded_event.hpp:
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_started_event.hpp:
+
+/usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h:
 
 /usr/local/include/mongocxx/v_noabi/mongocxx/events/heartbeat_failed_event.hpp:
 
@@ -1776,6 +1802,8 @@ CMakeFiles/socserver.dir/server/mongo.cpp.o: /home/afz/workzone/socket/mongo-ecl
 
 /usr/include/c++/9/exception:
 
+/usr/include/c++/9/bits/locale_facets_nonio.h:
+
 /usr/include/c++/9/new:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h:
@@ -1940,6 +1968,8 @@ CMakeFiles/socserver.dir/server/mongo.cpp.o: /home/afz/workzone/socket/mongo-ecl
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
+/usr/include/c++/9/bits/codecvt.h:
+
 /usr/include/c++/9/bits/enable_special_members.h:
 
 /usr/include/features.h:
@@ -1995,6 +2025,8 @@ CMakeFiles/socserver.dir/server/mongo.cpp.o: /home/afz/workzone/socket/mongo-ecl
 /usr/include/netinet/in.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/c++/9/iomanip:
 
 /usr/local/include/bsoncxx/v_noabi/bsoncxx/document/view_or_value.hpp:
 
@@ -2106,6 +2138,8 @@ CMakeFiles/socserver.dir/server/mongo.cpp.o: /home/afz/workzone/socket/mongo-ecl
 
 /usr/include/c++/9/system_error:
 
+/usr/include/c++/9/bits/quoted_string.h:
+
 /usr/include/c++/9/thread:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h:
@@ -2215,6 +2249,8 @@ CMakeFiles/socserver.dir/server/mongo.cpp.o: /home/afz/workzone/socket/mongo-ecl
 /usr/include/c++/9/bits/shared_ptr_base.h:
 
 /usr/include/c++/9/bits/allocated_ptr.h:
+
+/usr/include/c++/9/sstream:
 
 /usr/include/c++/9/typeinfo:
 
