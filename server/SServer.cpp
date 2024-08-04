@@ -49,7 +49,7 @@ typedef struct{
 	 int  speed ;
 	 char fuel[6];
 	 char temp[6];
-	 char gsm_strength[6];
+	 char gsm_strength;
 	 int sat_view;
 	 char hdop[12];
 	 char pdop[12];
@@ -298,7 +298,6 @@ void parse_alarm_pacet(Packet_t * packet, Vehicle_info_t *vehicle)
 //    printf("alarm packet : lat %.6f  lon %.6f  time %s  speed %s \n", vehicle->latitude, vehicle->longitude,  vehicle->time, vehicle->speed);
 }
 
-
 void handle_connection(int sockfd)
 {
 	Vehicle_info_t vehicle;
@@ -329,14 +328,19 @@ void handle_connection(int sockfd)
     memset(vehicle.data_status, 0, sizeof(vehicle.data_status));
     memset(vehicle.fuel, 0, sizeof(vehicle.fuel));
     memset(vehicle.temp, 0, sizeof(vehicle.temp));
-    memset(vehicle.gsm_strength, 0, sizeof(vehicle.gsm_strength));
+    //memset(vehicle.gsm_strength, 0, sizeof(vehicle.gsm_strength));
     //memset(vehicle.sat_view, 0, sizeof(vehicle.sat_view));
     memset(vehicle.hdop, 0, sizeof(vehicle.hdop));
     memset(vehicle.pdop, 0, sizeof(vehicle.pdop));
     //memset(vehicle.course, 0, sizeof(vehicle.course));
     memset(vehicle.sensor, 0, sizeof(vehicle.sensor));
 
+    vehicle.gsm_strength = 0 ;
+
     int mongo_update = 0 ;
+
+
+
 
     while(recv(sockfd, buffer, 10240, 0) > 0)
     {
@@ -358,10 +362,27 @@ void handle_connection(int sockfd)
     	        {
     	        	case PROTOCOL_NO_LOGIN:
     	        		parse_login_packet(&packet, &vehicle);
-    	        		send(sockfd, (void*)packet.resp_packet, 10, MSG_NOSIGNAL);
-
-    	        		_collection = v_db[(char*)vehicle.imei];
-
+    	        		{
+    	        			string lat;
+    	        			string lon;
+    	        			_collection = v_db[(char*)vehicle.imei];
+    	        			auto opts = mongocxx::options::find{};
+    	        			opts.sort(make_document(kvp("_id", -1)));
+    	        			opts.limit(1);
+    	        			auto cursor = _collection.find({}, opts);
+    	        			for (auto&& doc : cursor)
+    	        			{
+    	        			//	bsoncxx::document::element e = doc["latitude"];
+    	        				lat =  doc["latitude"].get_string().value.to_string() ;
+    	        				lon =  doc["longitude"].get_string().value.to_string() ;
+    	        			//uint64_t value = doc["time"].get_int64().value;
+    	        				std::cout << "last-lat: " <<lat <<  " last-lon:" << lon << std::endl;
+        	        			strcpy(vehicle.latitude, lat.c_str());
+        	        			strcpy(vehicle.longitude, lon.c_str());
+           	        			std::cout << "reload-lat: " <<vehicle.latitude <<  "  reload-lon:" << vehicle.longitude << std::endl;
+    	        			}
+    	        		}
+     	        		send(sockfd, (void*)packet.resp_packet, 10, MSG_NOSIGNAL);
     	        		break;
     	        	case PROTOCOL_HEARTBIT:
     	        		printf("hartbit-packet\n");
@@ -394,8 +415,8 @@ void handle_connection(int sockfd)
 							kvp("speed", vehicle.speed),
 							kvp("fuel", vehicle.fuel),
         	    			kvp("temp", vehicle.temp),
-        	    			kvp("gsm-strength", vehicle.gsm_strength),
-							kvp("sat-view", vehicle.sat_view),
+        	    			kvp("gsmstrength", vehicle.gsm_strength),
+							kvp("satview", vehicle.sat_view),
 							kvp("hdop", vehicle.hdop),
 							kvp("pdop", vehicle.pdop),
         	    			kvp("course", vehicle.course),
