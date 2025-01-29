@@ -39,23 +39,6 @@ using namespace std;
 #define PROTOCOL_ALARM 				0x16
 
 
-//
-//typedef struct{
-//	 char imei[18];
-//	 long time;
-//	 char latitude[16];
-//	 char longitude[16];
-//	 char data_status[2];
-//	 int  speed ;
-//	 char fuel[6];
-//	 char temp[6];
-//	 char gsm_strength;
-//	 int sat_view;
-//	 char hdop[12];
-//	 char pdop[12];
-//	 int course;
-//	 char sensor[3] ;
-//}Vehicle_info_t;
 
 typedef struct{
 	 long time;
@@ -186,20 +169,27 @@ void parse_login_packet(Packet_t * packet, Vehicle_info_t *vehicle)
 }
 void parse_hartbit_packet(Packet_t * packet, Vehicle_info_t *vehicle)
 {
+	memset(packet->resp_packet, 0, sizeof(packet->resp_packet));
 
-
-	if(packet->src[2] & (1<<1))					// packet->src[2] terminal information
+	if(packet->src[2] & (1<<1))
 	{
-		vehicle->sensor = (1<<1);
-		printf("engine on \n");
-	}else 	printf("engine off \n");
-
-	if(packet->src[2] & (1<<7))					// packet->src[2] terminal information
+		vehicle->sensor |= (1<<0);		  // packet->src[2] ACC
+		printf("engine on   .");
+	}
+	else
 	{
-		vehicle->sensor = (1<<7);
-		printf("Oil and electricity disconnected \n");
+		vehicle->sensor &= ~(1<<0);
+		printf("engine off  .");
+	}
 
-	}else 	printf("Oil and electricity connected \n");
+	if(packet->src[2] & (1<<7))		vehicle->sensor |= (1<<1);		  // packet->src[2] Oil and electricity
+	else 							vehicle->sensor &= ~(1<<1);
+
+	if(packet->src[2] & (1<<0))		vehicle->sensor |= (1<<2);		  //Defense
+	else 							vehicle->sensor &= (1<<2);
+
+	if(packet->src[2] & (1<<2))		vehicle->sensor |= (1<<3);		  //charge
+	else 							vehicle->sensor &= (1<<3);
 
 
 	uint16_t crc ;
@@ -218,8 +208,13 @@ void parse_hartbit_packet(Packet_t * packet, Vehicle_info_t *vehicle)
 	packet->resp_packet[8] = 0x0d;    		   //stop byte
 	packet->resp_packet[9] = 0x0a;    		   //stop byte
 
-	//  printf("hartbit-packet-resp  \n");
-	//  for(int kk=0; kk<10; kk++){  printf("%x ", resp_packet[kk]) ; }  printf("\n");
+//	printf("hartbit-packet-resp  \n");
+//	for(int kk=0; kk<10; kk++){  printf("%x ", packet->resp_packet[kk]) ; }  printf("\n");
+
+    std::time_t t = std::time(0);
+    vehicle->time = (long)t ;
+
+	printf("hart-bit pkt : "); if(vehicle->sensor & (1<<3)) printf("defence on ");  else printf("defence off ");	printf ("\n");
 }
 void parse_location_packet(Packet_t * packet, Vehicle_info_t *vehicle)
 {
@@ -241,7 +236,7 @@ void parse_location_packet(Packet_t * packet, Vehicle_info_t *vehicle)
     t.tm_sec = packet->src[7];
 
     time_t time_epoch = mktime(&t);
-    vehicle->time = (long)time_epoch;
+    vehicle->time = (long)time_epoch-(6*3600);
 
     printf("TIME : %u \n", vehicle->time );
 
@@ -252,11 +247,15 @@ void parse_location_packet(Packet_t * packet, Vehicle_info_t *vehicle)
     rcv_crc  = (0xff00 & (packet->src[30] << 8)) ;
     rcv_crc  |= (0x00ff &  packet->src[31]);
 
-    printf("location packet rvc_crc %d  and  cal_crc  %d\n", rcv_crc , cal_crc);
+    printf("location packet : rvc_crc-%d  cal_crc-%d ", rcv_crc , cal_crc);
 
     if( rcv_crc == cal_crc)
     {
     	vehicle->speed = packet->src[17];
+    	if(vehicle->speed > 0)
+    	{
+    		vehicle->sensor |= (1<<0);		  // packet->src[2] ACC
+    	}
 
     	lat_int =  (0xff000000  &  (packet->src[9] << 24)) ;
     	lat_int |= (0x00ff0000  &  (packet->src[10] << 16)) ;
@@ -274,20 +273,20 @@ void parse_location_packet(Packet_t * packet, Vehicle_info_t *vehicle)
     	lat_f /= 1800000 ;
     	lon_f /= 1800000 ;
 
-    	//printf("latitude %.6f  longitude %.6f  speed %d  \n", lat_f, lon_f,  speed);
+
+    	vehicle->course   = (0xff00 & (packet->src[18] << 8)) ;
+    	vehicle->course   |= (0x00ff &  packet->src[19]);
+
+
     	sprintf((char*)vehicle->latitude, "%f", lat_f);
     	sprintf((char*)vehicle->longitude, "%f", lon_f);
 
-        printf("latitudef %.6f  longitudef %.6f  \n", lat_f, lon_f);
-        printf("speed %d \n", vehicle->speed);
-
-        printf("location packet :  lat %.6f  lon %.6f \n", vehicle->latitude,  vehicle->longitude );
+    	if(vehicle->course & ( 1<<12 )) printf("gps 1 . ");  else printf( "gps off . " );
+        printf("lat-%s  lon-%s  speed-%d \n ", vehicle->latitude , vehicle->longitude, vehicle->speed);
     }
-
- //   printf("location packet : time  "); for(int i=0; i<6; i++) { printf("%x  ",  vehicle->time[i]); } printf("\n");
-
+    printf("\n");
 }
-void parse_alarm_pacet(Packet_t * packet, Vehicle_info_t *vehicle)
+void parse_alarm_packet(Packet_t * packet, Vehicle_info_t *vehicle)
 {
     double lat_f, lon_f ;
     int lat_int, long_int ;
@@ -305,22 +304,12 @@ void parse_alarm_pacet(Packet_t * packet, Vehicle_info_t *vehicle)
     t.tm_sec = packet->src[7];
 
     time_t time_epoch = mktime(&t);
-    vehicle->time = (long)time_epoch;
+    vehicle->time = (long)time_epoch-(6*3600);
 
 	printf("time hex : ");	for(int i=0; i<6; i++){ printf("%x ", packet->src[2+i]) ; }		printf("\n");
     printf("TIME : %u \n", vehicle->time );
 
     vehicle->sat_view =  (0x0f & packet->src[8]);
-
-
-
-//  	memcpy(vehicle->course,  &packet->src[18], 2);
-//
-//  	vehicle->sat_view[0] = packet->src[8];;
-//  	vehicle->speed[0] =  packet->src[17];
-//
-//  	vehicle->course[0] =  packet->src[18];
-// 		vehicle->course[1] =  packet->src[19];
 
  	rvc_crc   = (0xff00 & (packet->src[36] << 8)) ;
  	rvc_crc  |= (0x00ff & packet->src[37]);
@@ -331,8 +320,6 @@ void parse_alarm_pacet(Packet_t * packet, Vehicle_info_t *vehicle)
 
 	if(rvc_crc == cal_crc)
 	{
-    	vehicle->speed = packet->src[17];
-
     	lat_int =  (0xff000000  &  (packet->src[9] << 24)) ;
     	lat_int |= (0x00ff0000  &  (packet->src[10] << 16)) ;
     	lat_int |= (0x0000ff00  &  (packet->src[11] << 8)) ;
@@ -349,18 +336,35 @@ void parse_alarm_pacet(Packet_t * packet, Vehicle_info_t *vehicle)
     	lat_f /= 1800000 ;
     	lon_f /= 1800000 ;
 
-    	//printf("latitude %.6f  longitude %.6f  speed %d  \n", lat_f, lon_f,  speed);
+
+    	vehicle->speed = packet->src[17];
     	sprintf((char*)vehicle->latitude, "%f", lat_f);
     	sprintf((char*)vehicle->longitude, "%f", lon_f);
 
-        printf("latitudef %.6f  longitudef %.6f  \n", lat_f, lon_f);
-        printf("speed %d \n", vehicle->speed);
-
-        printf("location packet :  lat %.6f  lon %.6f \n", vehicle->latitude,  vehicle->longitude );
+        printf("alarm  packet :  lat %.6f  lon %.6f . ", vehicle->latitude,  vehicle->longitude );
 	}
 
 	vehicle->device_voltage_level = packet->src[30] ;
 	vehicle->gsm_strength = packet->src[31] ;
+
+	if(packet->src[18] & (1<<1))		vehicle->sensor |= (1<<0);		  // packet->src[2] ACC
+	else 								vehicle->sensor &= ~(1<<0);
+
+	if(packet->src[18] & (1<<7))		vehicle->sensor |= (1<<1);		  // packet->src[2] Oil and electricity
+	else 								vehicle->sensor &= ~(1<<1);
+
+	if(packet->src[18] & (1<<0))		vehicle->sensor |= (1<<2);		  //Defense
+	else 								vehicle->sensor &= (1<<2);
+
+	printf(" alarm-hex : %x  .", packet->src[18]);
+
+	if((packet->src[18] & 0x00111000) == 0x00110000)	        { printf("low battery alarm \n");}
+	else if((packet->src[18] & 0x00111000) == 0x00010000)		{ printf("Power Cut alarm \n");}
+	else if((packet->src[18] & 0x00111000) == 0x00100000)		{ printf("Vibration alarm \n");}
+	else if((packet->src[18] & 0x00111000) == 0x00000000)		{ printf("Normal \n");}
+	else if((packet->src[18] & 0x00111000) == 0x00001000)		{ printf("sos alarm \n");}
+
+	printf("\n");
 }
 
 void handle_connection(int sockfd)
@@ -390,18 +394,22 @@ void handle_connection(int sockfd)
     memset(vehicle.pdop, 0, sizeof(vehicle.pdop));
 
 
+    memcpy(vehicle.latitude, "00.00", 5);
+    memcpy(vehicle.longitude, "00.00", 5);
+    memcpy(vehicle.data_status, "0", 1);
+    memcpy(vehicle.hdop, "00.00", 5);
+    memcpy(vehicle.pdop, "00.00", 5);
+
+    vehicle.sensor = 0 ;
+
+
 
 
     int mongo_update = 0 ;
 
     while(recv(sockfd, buffer, 10240, 0) > 0)
     {
-        for(int i=0;;i++)
-        {
-        	printf("%x  ", buffer[i]);
-        	if((buffer[i]==0x0a && buffer[i-1]==0x0d) || (i >= 1023)) 	break;
-        }
-        printf("\n");
+        for(int i=0;;i++) { printf("%x  ", buffer[i]); if((buffer[i]==0x0a && buffer[i-1]==0x0d) || (i >= 1023)) 	break; }  printf("\n");
 
     	for(int idx=0; idx<10240; idx++)
     	{
@@ -429,18 +437,20 @@ void handle_connection(int sockfd)
     	        				lon =  doc["longitude"].get_string().value.to_string() ;
     	        				vehicle.speed = doc["speed"].get_int32().value ;
     	        			//uint64_t value = doc["time"].get_int64().value;
-    	        				std::cout << "last-lat: " <<lat << "    last-lon:" << lon << std::endl;
+    	        			//	std::cout << "last-lat: " <<lat << "    last-lon:" << lon << std::endl;
         	        			strcpy(vehicle.latitude, lat.c_str());
         	        			strcpy(vehicle.longitude, lon.c_str());
-           	        			std::cout << "lat: " <<vehicle.latitude <<  " lon:" << vehicle.longitude << "   speed"  << vehicle.speed << std::endl ;
+           	        			std::cout << "lat lat:" <<vehicle.latitude <<  " last lon:" << vehicle.longitude << " last speed:"  << vehicle.speed << std::endl ;
     	        			}
     	        		}
      	        		send(sockfd, (void*)packet.resp_packet, 10, MSG_NOSIGNAL);
     	        		break;
     	        	case PROTOCOL_HEARTBIT:
-    	        		printf("hartbit-packet\n");
+    	        		//printf("hartbit-packet\n");
     	        		parse_hartbit_packet(&packet, &vehicle);
     	        		send(sockfd, (void*)packet.resp_packet, 10, MSG_NOSIGNAL);
+    	        		printf("hartbit-packet-resp : ");
+    	        		for(int kk=0; kk<10; kk++){  printf("%x ", packet.resp_packet[kk]) ; }  printf("\n");
     	        		mongo_update  = 1 ;
     	        		break;
     	        	case PROTOCOL_LOCATION:
@@ -449,8 +459,8 @@ void handle_connection(int sockfd)
     	          		mongo_update  = 1 ;
     	        		break;
     	        	case PROTOCOL_ALARM:
-    	        		printf("alarm-packet\n");
-    	        		parse_alarm_pacet(&packet, &vehicle);
+    	        		//printf("alarm-packet\n");
+    	        		parse_alarm_packet(&packet, &vehicle);
     	        		mongo_update  = 1 ;
     	        		break;
     	        	default:
@@ -475,8 +485,8 @@ void handle_connection(int sockfd)
         	    			kvp("course", vehicle.course),
 							kvp("sensor", vehicle.sensor)
         	    		));
-
  //   	        	kvp("time", stol(speed, nullptr, 10))
+        	    	mongo_update = 0 ;
     	        }
     		}
     	}

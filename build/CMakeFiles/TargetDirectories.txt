@@ -1,4 +1,0 @@
-/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/socserver.dir
-/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/run.dir
-/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/edit_cache.dir
-/home/afz/workzone/socket/mongo-eclipse-ws/vts-cocket/tr-06-cpp-server/build/CMakeFiles/rebuild_cache.dir
